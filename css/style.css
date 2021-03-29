@@ -2,4 +2,101 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+/* box centrale min-width: 950px; */
+
+header{
+  background-color: #009688;
+  height: 15vh;
+}
+footer{
+  background-color: #DBDBD2;
+  height: 85vh;
+}
+/* General */
+img{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+/* Main */
+main{
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+main #parte-sinistra{
+  width: 30%;
+  min-width: 200px;;
+  height: 100%;
+  border: 1px solid blue;
+}
+main #parte-destra{
+  width: 70%;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+/* Parte Sinistra */
+/* Utente */
+#utente{
+  height: 50px;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+}
+#foto-nome{
+  display: flex;
+  align-items: center;
+}
+#foto-nome h3{
+  margin-left: 5px;
+}
+
+#icone{
+  display: flex;
+  align-items: center;
+}
+#icone i{
+  margin: 0px 5px;
+  color: #B1B1B1;
+}
+
+/* Banner Notifiche */
+#banner-notifiche{
+  height: 75px;
+  background-color: #8EDAFC;
+  display: flex;
+  align-items: center;
+}
+#banner-notifiche div:first-child{
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8EDAFC;
+  margin: 0px 5px;
+}
+#banner-notifiche div:last-child h6{
+  color: grey;
+  text-decoration: underline;
+}
+
+
+/* Lista Chat */
+#lista-chat{
+  height: calc(100% - 125px);
+  background-color: green;
 }
