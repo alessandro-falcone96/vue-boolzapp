@@ -16,7 +16,7 @@
 
     <header></header>
 
-    <main>
+    <main id="zapp">
       <section id="parte-sinistra">
 
         <section id="utente">
@@ -43,7 +43,7 @@
 
         </section>
 
-        <section id="lista-chat">
+        <section id="container-chat">
           <div id="barra-ricerca">
             <div>
               <i class="fas fa-search"></i>
@@ -51,7 +51,8 @@
 
             <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
           </div>
-          <div id="chat">
+
+          <div id="lista-chat">
             <div v-for="(item, index) in listaImmagini">
               <img :src="listaImmagini[index]" alt="">
               <h4>{{listaChat[index]}}</h4>
@@ -79,7 +80,17 @@
         </div>
 
         <div id="chat-selezionata">
+          <div class="container">
 
+            <div class="box green">
+
+            </div>
+
+            <div class="box white">
+
+            </div>
+
+          </div>
         </div>
 
         <div id="messaggio">

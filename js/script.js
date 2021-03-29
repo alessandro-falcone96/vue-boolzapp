@@ -1,7 +1,7 @@
 // Inserisci il codice qui
 var app = new Vue(
   {
-    el: '#chat',
+    el: '#zapp',
     data: {
       listaImmagini: ['img/avatar_1.jpg',
                       'img/avatar_2.jpg',
@@ -13,6 +13,9 @@ var app = new Vue(
                       'img/avatar_8.jpg'
                       ],
       listaChat: ['Michele', 'Fabio', 'Samuele', 'Luisa', 'Samantha', 'Sofia', 'Clelia', 'Alessio']
+    },
+    methods:{
+      
     }
   }
 );

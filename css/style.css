@@ -97,46 +97,50 @@ main #parte-destra{
 
 
 /* Lista Chat */
-#lista-chat{
+#container-chat{
   height: calc(100% - 125px);
 }
-#lista-chat #barra-ricerca{
+#container-chat #barra-ricerca{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 30px;
-  background-color: #EAEAEA;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
 }
-#lista-chat #barra-ricerca div{
+#container-chat #barra-ricerca div{
   width: 50px;
   height: 80%;
-  background-color: white;
+  border: 1px solid lightgrey;
   color: #B1B1B1;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
 }
-#lista-chat #barra-ricerca input{
+#container-chat #barra-ricerca input{
   width: 80%;
   height: 80%;
-  border: 1px solid white;
+  border: 1px solid lightgrey;
   border-radius: 3px;
 }
-#lista-chat #chat{
+#container-chat #lista-chat{
   background-color: white;
 }
-#lista-chat #chat div{
+#container-chat #lista-chat div{
   display: flex;
   height: 60px;
 }
-#lista-chat #chat div:not(:last-child){
+#container-chat #lista-chat div:hover{
+  background-color: lightgrey;
+}
+#container-chat #lista-chat div:not(:last-child){
   border-bottom: 1px solid lightgrey;
 }
-#lista-chat #chat div img{
+#container-chat #lista-chat div img{
   align-self: center;
 }
-#lista-chat #chat div h4{
+#container-chat #lista-chat div h4{
   margin-left: 5px;
 }
 
@@ -165,6 +169,30 @@ main #parte-destra{
 #parte-destra #chat-selezionata{
   height: calc(100% - 100px);
   background-image: url("../img/mine.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#parte-destra #chat-selezionata .container{
+  width: 80%;
+  height: 80%;
+}
+.box{
+  min-height: 50px;
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.green{
+  background-color: lightgreen;
+  margin-right: 0;
+  margin-left: auto;
+}
+.white{
+  background-color: white;
+}
+.provagrey{
+  background-color: grey;
 }
 
 #parte-destra #messaggio{
