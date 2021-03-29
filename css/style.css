@@ -33,18 +33,18 @@ main{
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  border: 1px solid lightgrey;
 }
 main #parte-sinistra{
   width: 30%;
   min-width: 200px;;
   height: 100%;
-  border: 1px solid blue;
-  background-color: #EAEAEA;
+  background-color: white;
+  border-right: 1px solid lightgrey
 }
 main #parte-destra{
   width: 70%;
   height: 100%;
-  border: 1px solid blue;
 }
 
 /* Parte Sinistra */
@@ -53,6 +53,7 @@ main #parte-destra{
   height: 50px;
   display: flex;
   justify-content: space-between;
+  background-color: #EAEAEA;
 }
 #utente #foto-nome{
   display: flex;
@@ -104,6 +105,7 @@ main #parte-destra{
   justify-content: space-around;
   align-items: center;
   height: 30px;
+  background-color: #EAEAEA;
 }
 #lista-chat #barra-ricerca div{
   width: 50px;
@@ -136,4 +138,53 @@ main #parte-destra{
 }
 #lista-chat #chat div h4{
   margin-left: 5px;
+}
+
+
+/* Parte Destra */
+#parte-destra #nome-selezionato{
+  height: 50px;
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#parte-destra #nome-selezionato div:first-child{
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+#parte-destra #nome-selezionato div:first-child h5{
+  color: grey;
+}
+#parte-destra #nome-selezionato div:last-child i{
+  margin: 0px 5px;
+  color: grey;
+}
+
+#parte-destra #chat-selezionata{
+  height: calc(100% - 100px);
+  background-image: url("../img/mine.jpg");
+}
+
+#parte-destra #messaggio{
+  height: 50px;
+  background-color: #F3EEEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#parte-destra #messaggio div{
+  width: 10%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+#parte-destra #messaggio input{
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 3px;
 }
