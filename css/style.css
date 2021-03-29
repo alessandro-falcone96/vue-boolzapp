@@ -39,6 +39,7 @@ main #parte-sinistra{
   min-width: 200px;;
   height: 100%;
   border: 1px solid blue;
+  background-color: #EAEAEA;
 }
 main #parte-destra{
   width: 70%;
@@ -50,23 +51,22 @@ main #parte-destra{
 /* Utente */
 #utente{
   height: 50px;
-  background-color: #EAEAEA;
   display: flex;
   justify-content: space-between;
 }
-#foto-nome{
+#utente #foto-nome{
   display: flex;
   align-items: center;
 }
-#foto-nome h3{
+#utente #foto-nome h3{
   margin-left: 5px;
 }
 
-#icone{
+#utente #icone{
   display: flex;
   align-items: center;
 }
-#icone i{
+#utente #icone i{
   margin: 0px 5px;
   color: #B1B1B1;
 }
@@ -98,5 +98,42 @@ main #parte-destra{
 /* Lista Chat */
 #lista-chat{
   height: calc(100% - 125px);
-  background-color: green;
+}
+#lista-chat #barra-ricerca{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+}
+#lista-chat #barra-ricerca div{
+  width: 50px;
+  height: 80%;
+  background-color: white;
+  color: #B1B1B1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+#lista-chat #barra-ricerca input{
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+#lista-chat #chat{
+  background-color: white;
+}
+#lista-chat #chat div{
+  display: flex;
+  height: 60px;
+}
+#lista-chat #chat div:not(:last-child){
+  border-bottom: 1px solid lightgrey;
+}
+#lista-chat #chat div img{
+  align-self: center;
+}
+#lista-chat #chat div h4{
+  margin-left: 5px;
 }
