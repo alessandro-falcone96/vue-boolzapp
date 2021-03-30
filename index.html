@@ -53,7 +53,7 @@
           </div>
 
           <div id="lista-chat">
-            <div v-for="(item, index) in contacts" v-on:click="indexActive(index)" :class="item.colorActive">
+            <div v-for="(item, index) in contacts" v-on:click="indexActive(index)" :class="{ grey: index==indexCount }">
               <img :src="item.avatar" alt="">
               <h4>{{item.name}}</h4>
             </div>
