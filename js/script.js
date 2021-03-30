@@ -172,8 +172,13 @@ var app = new Vue(
                 }
             ],
         },
-      ]
+      ],
+      indexCount: 0
     },
-
+    methods: {
+      indexActive: function(index) {
+        this.indexCount = index;
+      }
+    }
   }
 );
