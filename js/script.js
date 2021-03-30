@@ -18,20 +18,21 @@ var app = new Vue(
             name: 'Michele',
             avatar: 'img/avatar_1.jpg',
             visible: true,
+            colorActive: 'bgwhite',
             messages: [{
                 date: '10/01/2020 15:30:55',
                 message: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                status: 'received'
               },
               {
                   date: '10/01/2020 15:50:00',
                   message: 'Ricordati di dargli da mangiare',
-                  status: 'sent'
+                  status: 'received'
               },
               {
                   date: '10/01/2020 16:15:22',
                   message: 'Tutto fatto!',
-                  status: 'received'
+                  status: 'sent'
               }
             ],
         },
@@ -39,137 +40,151 @@ var app = new Vue(
             name: 'Fabio',
             avatar: 'img/avatar_2.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '20/03/2020 16:30:00',
                 message: 'Ciao come stai?',
+                status: 'received'
+              },
+              {
+                date: '20/03/2020 16:30:55',
+                message: 'Bene grazie! Stasera ci vediamo?',
                 status: 'sent'
-            },
-                {
-                    date: '20/03/2020 16:30:55',
-                    message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
-                },
-                {
-                    date: '20/03/2020 16:35:00',
-                    message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
-                }
+              },
+              {
+                date: '20/03/2020 16:35:00',
+                message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Samuele',
             avatar: 'img/avatar_3.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '28/03/2020 10:10:40',
                 message: 'La Marianna va in campagna',
                 status: 'received'
-            },
-                {
-                    date: '28/03/2020 10:20:10',
-                    message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
-                },
-                {
-                    date: '28/03/2020 16:15:22',
-                    message: 'Ah scusa!',
-                    status: 'received'
-                }
+              },
+              {
+                date: '28/03/2020 10:20:10',
+                message: 'Sicuro di non aver sbagliato chat?',
+                status: 'sent'
+              },
+              {
+                date: '28/03/2020 16:15:22',
+                message: 'Ah scusa!',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Luisa',
             avatar: 'img/avatar_4.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
                 status: 'sent'
-            },
-                {
-                    date: '10/01/2020 15:50:00',
-                    message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
-                }
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Si, ma preferirei andare al cinema',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Samantha',
             avatar: 'img/avatar_5.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '10/01/2020 15:30:55',
                 message: 'Hai portato a spasso il cane?',
                 status: 'sent'
-            },
-                {
-                    date: '10/01/2020 15:50:00',
-                    message: 'Ricordati di dargli da mangiare',
-                    status: 'sent'
-                },
-                {
-                    date: '10/01/2020 16:15:22',
-                    message: 'Tutto fatto!',
-                    status: 'received'
-                }
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Ricordati di dargli da mangiare',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 16:15:22',
+                message: 'Tutto fatto!',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Chiara',
             avatar: 'img/avatar_6.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '20/03/2020 16:30:00',
                 message: 'Ciao come stai?',
+                status: 'received'
+              },
+              {
+                date: '20/03/2020 16:30:55',
+                message: 'Bene grazie! Stasera ci vediamo?',
                 status: 'sent'
-            },
-                {
-                    date: '20/03/2020 16:30:55',
-                    message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
-                },
-                {
-                    date: '20/03/2020 16:35:00',
-                    message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
-                }
+              },
+              {
+                date: '20/03/2020 16:35:00',
+                message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Clelia',
             avatar: 'img/avatar_7.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '28/03/2020 10:10:40',
                 message: 'La Marianna va in campagna',
                 status: 'received'
-            },
-                {
-                    date: '28/03/2020 10:20:10',
-                    message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
-                },
-                {
-                    date: '28/03/2020 16:15:22',
-                    message: 'Ah scusa!',
-                    status: 'received'
-                }
+              },
+              {
+                date: '28/03/2020 10:20:10',
+                message: 'Sicuro di non aver sbagliato chat?',
+                status: 'sent'
+              },
+              {
+                date: '28/03/2020 16:15:22',
+                message: 'Ah scusa!',
+                status: 'received'
+              }
             ],
         },
         {
             name: 'Alessio',
             avatar: 'img/avatar_8.jpg',
             visible: true,
-            messages: [{
+            colorActive: 'bgwhite',
+            messages: [
+              {
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
                 status: 'sent'
-            },
-                {
-                    date: '10/01/2020 15:50:00',
-                    message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
-                }
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Si, ma preferirei andare al cinema',
+                status: 'received'
+              }
             ],
         },
       ],
@@ -178,6 +193,10 @@ var app = new Vue(
     methods: {
       indexActive: function(index) {
         this.indexCount = index;
+        for (var item in this.contacts) {
+          this.contacts[item].colorActive = 'bgwhite';
+        }
+        this.contacts[index].colorActive = (this.contacts[index].colorActive == 'bgwhite') ? 'grey' : 'bgwhite';
       }
     }
   }

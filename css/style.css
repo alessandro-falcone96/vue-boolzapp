@@ -133,7 +133,7 @@ main #parte-destra{
   height: 60px;
 }
 #container-chat #lista-chat div:hover{
-  background-color: lightgrey;
+  background-color: #E8EBEB;
 }
 #container-chat #lista-chat div:not(:last-child){
   border-bottom: 1px solid lightgrey;
@@ -185,15 +185,15 @@ main #parte-destra{
   padding: 10px;
 }
 .green{
-  background-color: lightgreen;
-  margin-right: 0;
-  margin-left: auto;
+  background-color: #D5F9BA;
+  margin: 5px 0px 5px auto;
 }
 .white{
   background-color: white;
+  margin: 5px 0px;
 }
-.provagrey{
-  background-color: grey;
+.grey{
+  background-color: lightgrey;
 }
 
 #parte-destra #messaggio{
