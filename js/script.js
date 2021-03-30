@@ -178,12 +178,29 @@ var app = new Vue(
             ],
         },
       ],
-      indexCount: 0
+      indexCount: 0,
+      newMessage: ""
     },
     methods: {
       indexActive: function(index) {
         this.indexCount = index;
-      }
+      },
+      addMessage: function(indexCount) {
+        this.contacts[indexCount].messages.push(
+          {
+            message: this.newMessage,
+            status: 'sent'
+          }
+        );
+        setTimeout(() => {
+            this.contacts[indexCount].messages.push(
+              {
+                message: 'ok',
+                status: 'received'
+              }
+            );
+        }, 1000);
+      },
     }
   }
 );

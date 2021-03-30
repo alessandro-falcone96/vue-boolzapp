@@ -86,12 +86,6 @@
               {{message.message}}
             </div>
 
-            <!--  -->
-
-            <!-- <div class="box white">
-
-            </div> -->
-
           </div>
         </div>
 
@@ -100,7 +94,7 @@
             <i class="far fa-smile fa-lg"></i>
           </div>
 
-          <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+          <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.13="addMessage(indexCount)">
 
           <div>
             <i class="fas fa-microphone fa-lg"></i>
