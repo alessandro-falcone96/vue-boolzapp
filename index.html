@@ -53,9 +53,9 @@
           </div>
 
           <div id="lista-chat">
-            <div v-for="(item, index) in listaImmagini">
-              <img :src="listaImmagini[index]" alt="">
-              <h4>{{listaChat[index]}}</h4>
+            <div v-for="(item, index) in contacts">
+              <img :src="contacts[index].avatar" alt="">
+              <h4>{{contacts[index].name}}</h4>
             </div>
           </div>
         </section>
@@ -82,13 +82,15 @@
         <div id="chat-selezionata">
           <div class="container">
 
-            <div class="box green">
-
+            <div class="box" v-for="(message, index) in contacts[0].messages" :class="contacts[0].messages[index].status == 'sent' ? 'green' : 'white'" >
+              {{contacts[0].messages[index].message}}
             </div>
 
-            <div class="box white">
+            <!--  -->
 
-            </div>
+            <!-- <div class="box white">
+
+            </div> -->
 
           </div>
         </div>

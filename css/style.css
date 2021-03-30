@@ -99,30 +99,31 @@ main #parte-destra{
 /* Lista Chat */
 #container-chat{
   height: calc(100% - 125px);
+  overflow: auto;
 }
 #container-chat #barra-ricerca{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 35px;
   background-color: white;
   border-bottom: 1px solid lightgrey;
 }
 #container-chat #barra-ricerca div{
   width: 50px;
   height: 80%;
-  border: 1px solid lightgrey;
   color: #B1B1B1;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 1px solid #F0F0F0;
 }
 #container-chat #barra-ricerca input{
   width: 80%;
   height: 80%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 1px solid #F0F0F0;
 }
 #container-chat #lista-chat{
   background-color: white;
