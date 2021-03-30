@@ -179,7 +179,8 @@ var app = new Vue(
         },
       ],
       indexCount: 0,
-      newMessage: ""
+      newMessage: "",
+      ultimoAccesso: dayjs().format("HH:mm:ss")
     },
     methods: {
       indexActive: function(index) {
@@ -188,19 +189,22 @@ var app = new Vue(
       addMessage: function(indexCount) {
         this.contacts[indexCount].messages.push(
           {
+            date: dayjs().format("DD-MM-YYYY HH:mm:ss"),
             message: this.newMessage,
             status: 'sent'
           }
         );
+        this.newMessage = "";
         setTimeout(() => {
             this.contacts[indexCount].messages.push(
               {
-                message: 'ok',
+                date: dayjs().format("DD-MM-YYYY HH:mm:ss"),
+                message: 'Ok',
                 status: 'received'
               }
             );
-        }, 1000);
-      },
+        }, 2000);
+      }
     }
   }
 );

@@ -68,7 +68,7 @@
             <img :src="contacts[indexCount].avatar" alt="">
             <div>
               <h4>{{contacts[indexCount].name}}</h4>
-              <h5>Ultimo accesso oggi alle</h5>
+              <h5>Ultimo accesso oggi alle {{ultimoAccesso}}</h5>
             </div>
           </div>
 
@@ -84,6 +84,7 @@
 
             <div class="box" v-for="(message, index) in contacts[indexCount].messages" :class="message.status == 'sent' ? 'green' : 'white'" >
               {{message.message}}
+              <h6>{{message.date}}</h6>
             </div>
 
           </div>
@@ -101,10 +102,13 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <footer></footer>
 
+    <!-- day.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
     <!-- Vue (Development Version) -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- Js -->
