@@ -25,6 +25,7 @@ var app = new Vue(
                   status: 'sent'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Fabio',
@@ -48,6 +49,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Samuele',
@@ -71,6 +73,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Luisa',
@@ -78,6 +81,11 @@ var app = new Vue(
             visible: true,
             colorActive: 'bgwhite',
             messages: [
+              {
+                date: '10/01/2020 15:30:45',
+                message: 'Ciao',
+                status: 'sent'
+              },
               {
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -89,6 +97,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Samantha',
@@ -112,6 +121,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Chiara',
@@ -135,6 +145,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Clelia',
@@ -158,6 +169,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
         {
             name: 'Alessio',
@@ -165,6 +177,11 @@ var app = new Vue(
             visible: true,
             colorActive: 'bgwhite',
             messages: [
+              {
+                date: '10/01/2020 15:30:45',
+                message: 'Ciao',
+                status: 'sent'
+              },
               {
                 date: '10/01/2020 15:30:55',
                 message: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -176,6 +193,7 @@ var app = new Vue(
                 status: 'received'
               }
             ],
+            indexLast: 2
         },
       ],
       indexCount: 0,
@@ -195,6 +213,7 @@ var app = new Vue(
           }
         );
         this.newMessage = "";
+        this.contacts[indexCount].indexLast += 1;
         setTimeout(() => {
             this.contacts[indexCount].messages.push(
               {
@@ -203,6 +222,7 @@ var app = new Vue(
                 status: 'received'
               }
             );
+            this.contacts[indexCount].indexLast += 1;
         }, 2000);
       }
     }

@@ -55,7 +55,10 @@
           <div id="lista-chat">
             <div v-for="(item, index) in contacts" v-on:click="indexActive(index)" :class="{ grey: index==indexCount }">
               <img :src="item.avatar" alt="">
-              <h4>{{item.name}}</h4>
+              <div class="lastmessage">
+                <h3>{{item.name}}<span class="secondoSpan">{{item.messages[item.indexLast].date}}</span></h3>
+                <h6><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i><span class="primoSpan">{{item.messages[item.indexLast].message}}</span> <br> </h6>
+              </div>
             </div>
           </div>
         </section>
@@ -68,7 +71,7 @@
             <img :src="contacts[indexCount].avatar" alt="">
             <div>
               <h4>{{contacts[indexCount].name}}</h4>
-              <h5>Ultimo accesso oggi alle {{ultimoAccesso}}</h5>
+              <h5>Ultimo accesso oggi alle {{contacts[indexCount].messages[contacts[indexCount].indexLast].date}}</h5>
             </div>
           </div>
 

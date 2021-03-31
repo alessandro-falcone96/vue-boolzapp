@@ -128,9 +128,10 @@ main #parte-destra{
 #container-chat #lista-chat{
   background-color: white;
 }
-#container-chat #lista-chat div{
+#container-chat #lista-chat div:not(.lastmessage){
   display: flex;
   height: 60px;
+  position: relative;
 }
 #container-chat #lista-chat div:hover{
   background-color: #E8EBEB;
@@ -141,10 +142,34 @@ main #parte-destra{
 #container-chat #lista-chat div img{
   align-self: center;
 }
-#container-chat #lista-chat div h4{
-  margin-left: 5px;
+#container-chat #lista-chat div .lastmessage{
+  margin-left: 10px;
+  align-self: center;
 }
-
+#container-chat #lista-chat div .lastmessage h6{
+margin-top: 5px;
+position: relative;
+}
+.secondaSpunta{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+#container-chat #lista-chat div .lastmessage h3 span{
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+}
+#container-chat #lista-chat div .lastmessage h6 i{
+  color: #00f2ff;
+}
+#container-chat #lista-chat div .lastmessage h6 span.primoSpan{
+  margin-left: 8px;
+}
+#container-chat #lista-chat div .lastmessage h6 span.secondoSpan{
+  border: 1px solid black;
+  margin-right: 0;
+}
 
 /* Parte Destra */
 #parte-destra #nome-selezionato{
