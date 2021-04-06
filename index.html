@@ -49,15 +49,16 @@
               <i class="fas fa-search"></i>
             </div>
 
-            <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
           </div>
 
           <div id="lista-chat">
-            <div v-for="(item, index) in contacts" v-on:click="indexActive(index)" :class="{ grey: index==indexCount }">
+            <div v-for="(item, index) in filteredContacts" v-on:click="indexActive(index)" :class="{ grey: index==indexCount }">
               <img :src="item.avatar" alt="">
               <div class="lastmessage">
                 <h3>{{item.name}}<span class="secondoSpan">{{item.messages[item.indexLast].date}}</span></h3>
-                <h6><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i><span class="primoSpan">{{item.messages[item.indexLast].message}}</span> <br> </h6>
+                <h6 v-if="item.messages[item.indexLast].status == 'sent'"><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i><span class="primoSpan">{{item.messages[item.indexLast].message}}</span> <br></h6>
+                <h6 v-else><span class="primoSpan">{{item.messages[item.indexLast].message}}</span></h6>
               </div>
             </div>
           </div>
@@ -87,7 +88,10 @@
 
             <div class="box" v-for="(message, index) in contacts[indexCount].messages" :class="message.status == 'sent' ? 'green' : 'white'" >
               {{message.message}}
-              <h6>{{message.date}}</h6>
+
+              <h6 v-if="message.status == 'sent'"><span class="primoSpan">{{message.date}}</span><i class="fas fa-check primaSpunta"></i><i class="fas secondaSpunta fa-check"></i> <br></h6>
+              <h6 v-else><span class="primoSpan">{{message.date}}</span></h6>
+
             </div>
 
           </div>

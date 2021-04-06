@@ -1,4 +1,3 @@
-// Inserisci il codice qui
 var app = new Vue(
   {
     el: '#zapp',
@@ -198,7 +197,16 @@ var app = new Vue(
       ],
       indexCount: 0,
       newMessage: "",
-      ultimoAccesso: dayjs().format("HH:mm:ss")
+      ultimoAccesso: dayjs().format("HH:mm:ss"),
+      search: ""
+    },
+    computed: {
+      filteredContacts: function() {
+        return this.contacts.filter((contacts) => {
+            return contacts.name.toLowerCase().match(this.search.toLowerCase());
+          }
+        );
+      }
     },
     methods: {
       indexActive: function(index) {
